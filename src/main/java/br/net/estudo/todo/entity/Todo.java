@@ -1,4 +1,4 @@
-package entity;
+package br.net.estudo.todo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "todos")
-public class todo {
+public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,6 @@ public class todo {
     private Boolean realizado;
     private Integer prioridade;
 
-    
     public Long getId() {
         return id;
     }
