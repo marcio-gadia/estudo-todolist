@@ -7,6 +7,7 @@ import br.net.estudo.todo.repository.TodoRepository;
 import io.quarkus.panache.common.Sort;
 import jakarta.enterprise.context.ApplicationScoped;
 
+
 @ApplicationScoped
 public class TodoService {
 
@@ -39,6 +40,7 @@ public class TodoService {
                        todo.getPrioridade(),
                        todo.getId()
                       );
+
         return listarTodos();
     }    
 
