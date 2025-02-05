@@ -1,0 +1,15 @@
+services: 
+  mysql-db-todolist-service:
+    image: mysql:8.4
+    container_name: mysql-db-todolist-container
+    environment:
+      - MYSQL_USER=useradmin
+      - MYSQL_PASSWORD=user123456
+      - MYSQL_DATABASE=db_todolist
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+       
