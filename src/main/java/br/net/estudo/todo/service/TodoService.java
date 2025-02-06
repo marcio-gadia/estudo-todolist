@@ -33,7 +33,7 @@ public class TodoService {
 
     public List<Todo> alterarTodo (Todo todo) {
 
-        todoRepository.update("nome = ?1, descricao = ?2, realizado = ?3, prioridade = ?4 where = ?5",
+        todoRepository.update("nome = ?1, descricao = ?2, realizado = ?3, prioridade = ?4 where id = ?5",
                        todo.getNome(),
                        todo.getDescricao(),
                        todo.getRealizado(),

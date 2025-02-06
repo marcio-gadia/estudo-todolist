@@ -49,7 +49,7 @@ public class TodoController {
     }
 
     @DELETE
-    @Path("/delete?{id}")
+    @Path("/delete/{id}")
     @Transactional
     public RestResponse <List<Todo>> delete(Long id){
         List<Todo> listTodo = todoService.excluirTodo(id);
